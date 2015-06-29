@@ -1,0 +1,22 @@
+{
+  "name": "generator-horizon-react-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/index.js",
+  "scripts": {
+  },
+  "keywords": [
+    "yeoman-generator",
+    "react",
+    "component",
+    "stylus",
+    "browserify",
+    "es6"
+  ],
+  "author": "Vladimir Guguiev <wizardzloy@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "mkdirp": "^0.5.1",
+    "yeoman-generator": "^0.20.1"
+  }
+}

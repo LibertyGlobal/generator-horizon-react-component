@@ -1,0 +1,2 @@
+# exclude ES6 sources from publishing to npm
+src/
