@@ -62,7 +62,7 @@ module.exports = generators.Base.extend({
     this.fs.copy(this.templatePath('_gitignore'), this.destinationPath('.gitignore'));
     this.fs.copy(this.templatePath('_npmignore'), this.destinationPath('.npmignore'));
     this.fs.copyTpl(this.templatePath('_package.json'), this.destinationPath('package.json'), templateContext);
-    this.fs.copy(this.templatePath('component-template.styl'), this.destinationPath(packageName + '.styl'));
+    this.fs.copy(this.templatePath('component-template.scss'), this.destinationPath(packageName + '.scss'));
     this.fs.copyTpl(this.templatePath('index.js'), this.destinationPath('index.js'), templateContext);
     this.fs.copyTpl(this.templatePath('README.md'), this.destinationPath('README.md'), templateContext);
 

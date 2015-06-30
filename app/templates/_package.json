@@ -5,8 +5,8 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "build": "npm run compileStylus && npm run compileJs && npm run bundle",
-    "compileStylus": "stylus < <%= packageName %>.styl > lib/<%= packageName %>.css",
+    "build": "npm run compileStyles && npm run compileJs && npm run bundle",
+    "compileStyles": "node-sass <%= packageName %>.scss --output-style expanded > lib/<%= packageName %>.css",
     "compileJs": "babel src --out-dir lib",
     "bundle": "browserify index.js --standalone <%= globalVariableName %> -t browserify-shim -o lib/<%= packageName %>.bundle.js",
     "demo": "npm run demo-hint && http-server -p 9999",
@@ -29,7 +29,7 @@
     "expect.js": "^0.3.1",
     "http-server": "^0.8.0",
     "mocha": "^2.2.5",
-    "stylus": "^0.51.1",
+    "node-sass": "^3.2.0",
     "testdom": "^1.0.1"
   },
   "dependencies": {
