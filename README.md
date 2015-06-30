@@ -1,4 +1,5 @@
 # generator-horizon-react-component
+Yeoman generator for a component development scaffolding
 
 ## Usage
 
@@ -13,3 +14,14 @@ From your new project directory:
 ```
 
 Then follow the instructions from CLI
+
+## What's inside
+
+- Basic `React` component
+- ES6 + JSX compilation with `babel`
+- Standalone bundling with `browserify`
+- Tests with `mocha` + `jsdom`
+- Sass compilation with `node-sass`
+- Demo page
+
+Check more details in the README.md of the generated project
