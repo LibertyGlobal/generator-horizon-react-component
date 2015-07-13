@@ -1,5 +1,5 @@
 // enable DOM
-require('testdom')('<html><body></body></html>');
+require('jsdomify').create('<html><body></body></html>');
 
 var React = require('react/addons');
 var expect = require('expect.js');
