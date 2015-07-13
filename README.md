@@ -19,7 +19,6 @@ Then follow the instructions from CLI
 
 - Basic `React` component
 - ES6 + JSX compilation with `babel`
-- Standalone bundling with `browserify`
 - Tests with `mocha` + `jsdom`
 - Sass compilation with `node-sass`
 - Demo page

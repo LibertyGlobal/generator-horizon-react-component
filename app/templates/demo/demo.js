@@ -1,14 +1,11 @@
-(function(global) {
-  'use strict';
+'use strict';
 
-  var React = global.React;
-  var Component = global.<%= globalVariableName %>;
+var React = require('react');
+var Component = require('../lib/<%= packageName %>');
 
-  React.render(
-      React.createElement(Component, {
-        name: 'Hi, I\'m a component!'
-      }),
-      document.getElementById('app')
-  );
-
-}(this));
+React.render(
+    React.createElement(Component, {
+      name: 'Hi, I\'m a component!'
+    }),
+    document.getElementById('app')
+);

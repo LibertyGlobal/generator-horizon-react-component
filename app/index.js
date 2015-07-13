@@ -17,21 +17,10 @@ module.exports = generators.Base.extend({
           return packageName ? true : 'Should be a valid node package name';
         },
         filter: trim
-      },
-      {
-        type: 'input',
-        name: 'globalVariableName',
-        message: 'Provide the name of global variable your component would be available as (e.g. MyNamespace.ComponentName)',
-        validate: function(packageName) {
-
-          return packageName ? true : 'Should be a valid javascript variable name (could be namespaced)';
-        },
-        filter: trim
       }
     ], function(answers) {
 
       this.config.set('packageName', answers.packageName);
-      this.config.set('globalVariableName', answers.globalVariableName);
       done();
     }.bind(this));
 
@@ -40,10 +29,8 @@ module.exports = generators.Base.extend({
   writing: function() {
 
     var packageName = this.config.get('packageName');
-    var globalVariableName = this.config.get('globalVariableName');
     var templateContext = {
-      packageName: packageName,
-      globalVariableName: globalVariableName
+      packageName: packageName
     };
 
     // ./demo

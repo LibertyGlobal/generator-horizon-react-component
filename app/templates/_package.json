@@ -5,10 +5,10 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "build": "npm run compileStyles && npm run compileJs && npm run bundle",
+    "build": "npm run compileStyles && npm run compileJs && npm run bundle-demo",
     "compileStyles": "node-sass <%= packageName %>.scss --output-style expanded > lib/<%= packageName %>.css",
     "compileJs": "babel src --out-dir lib",
-    "bundle": "browserify index.js --standalone <%= globalVariableName %> -t browserify-shim -o lib/<%= packageName %>.bundle.js",
+    "bundle-demo": "browserify demo/demo.js -o demo/demo.bundle.js",
     "demo": "npm run demo-hint && http-server -p 9999",
     "demo-hint": "echo \"\\033[0;35m|---- Please open http://localhost:9999/demo/demo.html in your browser ----|\\033[0m\"",
     "test": "mocha test/**/*.js"
@@ -25,7 +25,6 @@
   "devDependencies": {
     "babel": "^5.6.12",
     "browserify": "^10.2.4",
-    "browserify-shim": "^3.8.9",
     "expect.js": "^0.3.1",
     "http-server": "^0.8.0",
     "jsdomify": "^0.3.0",
@@ -34,9 +33,6 @@
   },
   "dependencies": {
     "react": "^0.13.3"
-  },
-  "browserify-shim": {
-    "react": "global:React"
   }
 
 }
