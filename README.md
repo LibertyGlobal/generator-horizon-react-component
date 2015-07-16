@@ -21,6 +21,6 @@ Then follow the instructions from CLI
 - ES6 + JSX compilation with `babel`
 - Tests with `mocha` + `jsdom`
 - Sass compilation with `node-sass`
-- Demo page
+- Demo page built with `webpack`
 
 Check more details in the README.md of the generated project

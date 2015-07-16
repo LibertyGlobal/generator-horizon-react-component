@@ -8,7 +8,7 @@
     "build": "npm run compileStyles && npm run compileJs && npm run bundle-demo",
     "compileStyles": "node-sass <%= packageName %>.scss --output-style expanded > lib/<%= packageName %>.css",
     "compileJs": "babel src --out-dir lib",
-    "bundle-demo": "browserify demo/demo.js -o demo/demo.bundle.js",
+    "bundle-demo": "webpack --config webpack.config.js --colors",
     "demo": "npm run demo-hint && http-server -p 9999",
     "demo-hint": "echo \"\\033[0;35m|---- Please open http://localhost:9999/demo/demo.html in your browser ----|\\033[0m\"",
     "test": "mocha test/**/*.js"
@@ -24,12 +24,15 @@
   "license": "ISC",
   "devDependencies": {
     "babel": "^5.6.12",
-    "browserify": "^10.2.4",
+    "css-loader": "^0.15.4",
     "expect.js": "^0.3.1",
     "http-server": "^0.8.0",
     "jsdomify": "^0.3.0",
     "mocha": "^2.2.5",
-    "node-sass": "^3.2.0"
+    "node-sass": "^3.2.0",
+    "sass-loader": "^1.0.2",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.10.1"
   },
   "dependencies": {
     "react": "^0.13.3"

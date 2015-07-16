@@ -52,6 +52,7 @@ module.exports = generators.Base.extend({
     this.fs.copy(this.templatePath('component-template.scss'), this.destinationPath(packageName + '.scss'));
     this.fs.copyTpl(this.templatePath('index.js'), this.destinationPath('index.js'), templateContext);
     this.fs.copyTpl(this.templatePath('README.md'), this.destinationPath('README.md'), templateContext);
+    this.fs.copyTpl(this.templatePath('webpack.config.js'), this.destinationPath('webpack.config.js'), templateContext);
 
     // create lib directory
     mkdirp.sync(this.destinationPath('lib'));
