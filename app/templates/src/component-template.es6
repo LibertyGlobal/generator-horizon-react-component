@@ -1,22 +1,13 @@
-var React = require('react');
+import React from 'react';
 
-var HorizonComponent = React.createClass({
+export default class HorizonComponent extends React.Component {
+    render() {
+        return (
+            <div>{this.props.name}</div>
+        );
+    }
+}
 
-  displayName: 'HorizonComponent',
-
-  propTypes: {
+HorizonComponent.propTypes = {
     name: React.PropTypes.string
-  },
-
-  render() {
-
-    return (
-        <div>
-          {this.props.name}
-        </div>
-    );
-  }
-
-});
-
-module.exports = HorizonComponent;
+};

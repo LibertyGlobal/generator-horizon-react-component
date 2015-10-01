@@ -19,7 +19,7 @@ describe('Component', function() {
         })
     );
 
-    expect(element.getDOMNode().textContent).to.be.equal(name);
+    expect(React.findDOMNode(element).textContent).to.be.equal(name);
 
   });
 

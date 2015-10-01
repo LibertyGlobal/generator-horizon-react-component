@@ -1,0 +1,7 @@
+{
+  "extends": "libertyglobal",
+
+  "rules": {
+    "indent": [2, 4]
+  }
+}

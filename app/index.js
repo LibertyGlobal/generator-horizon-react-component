@@ -46,6 +46,7 @@ module.exports = generators.Base.extend({
         templateContext);
 
     // root
+    this.fs.copy(this.templatePath('_eslintrc'), this.destinationPath('.eslintrc'));
     this.fs.copy(this.templatePath('_gitignore'), this.destinationPath('.gitignore'));
     this.fs.copy(this.templatePath('_npmignore'), this.destinationPath('.npmignore'));
     this.fs.copyTpl(this.templatePath('_package.json'), this.destinationPath('package.json'), templateContext);
