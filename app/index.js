@@ -35,7 +35,7 @@ module.exports = generators.Base.extend({
 
     // ./demo
     this.fs.copyTpl(this.templatePath('demo/demo.js'), this.destinationPath('demo/demo.js'), templateContext);
-    this.fs.copyTpl(this.templatePath('demo/demo.html'), this.destinationPath('demo/demo.html'), templateContext);
+    this.fs.copyTpl(this.templatePath('demo/index.html'), this.destinationPath('demo/index.html'), templateContext);
 
     // ./src
     this.fs.copy(this.templatePath('src/component-template.es6'), this.destinationPath('src/' + packageName + '.es6'));
